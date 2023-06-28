@@ -1,4 +1,4 @@
-package paint;
+package com.bitacademy.paint.text;
 
 public class GraphicText implements Drawable {
 	private String text;

@@ -1,4 +1,4 @@
-package paint;
+package com.bitacademy.paint.main;
 
 public class Main {
 	public static void main(String[] args) {

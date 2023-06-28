@@ -24,11 +24,11 @@ public class TV {
 	}
 	
 	public void channel(int channel) {
-		
+		this.channel = channel;
 	}
 	
 	public void channel(boolean up) {
-		
+		this.channel = (channel + 1) % 255;
 	}
 	
 	public void status() {

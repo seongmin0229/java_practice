@@ -1,4 +1,4 @@
-package paint;
+package com.bitacademy.paint.shape;
 
 public abstract class Shape implements Drawable {
 	private String lineColor;
