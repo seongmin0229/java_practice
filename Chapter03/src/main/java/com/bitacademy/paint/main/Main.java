@@ -1,5 +1,10 @@
 package com.bitacademy.paint.main;
 
+import com.bitacademy.paint.i.Drawable;
+import com.bitacademy.paint.point.*;
+import com.bitacademy.paint.shape.*;
+import com.bitacademy.paint.text.*;
+
 public class Main {
 	public static void main(String[] args) {
 		Point point1 = new Point();
