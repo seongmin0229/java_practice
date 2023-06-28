@@ -12,23 +12,45 @@ public class TV {
 	}
 	
 	public void power(boolean on) {
-		on = on ? false : true;
+		this.power = on;
 	}
 	
 	public void volume(int volume) {
-		this.volume = volume;
+		if(power) {
+			if(volume < 0) {
+				System.out.println("잘못된 음향입니다.");
+			}else {
+				this.volume = volume;
+			}
+		}else {
+			System.out.println("전원이 꺼져있습니다.");
+		}
 	}
 	
 	public void volume(boolean up) {
-		this.volume = (volume + 1) % 100;
+		if(power) 
+			this.volume = (volume + 1) % 100;
+		else
+			System.out.println("전원이 꺼져있습니다.");
 	}
 	
 	public void channel(int channel) {
-		this.channel = channel;
+		if(power) {
+			if(channel <= 0) {
+				System.out.println("잘못된 채널입니다.");
+			}else {
+				this.channel = channel;
+			}
+		}else {
+			System.out.println("전원이 꺼져있습니다.");
+		}
 	}
 	
 	public void channel(boolean up) {
-		this.channel = (channel + 1) % 255;
+		if(power)
+			this.channel = this.channel == 254 ? (channel + 1) % 255 + 1 : (channel + 1) % 255;
+		else
+			System.out.println("전원이 꺼져있습니다.");
 	}
 	
 	public void status() {
