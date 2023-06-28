@@ -1,0 +1,12 @@
+#maven
+**/target/
+**/build/
+**/out/
+
+#eclipse
+**/.settings
+**/.metadata/
+**/.classpath
+README.md
+**/.project
+**/bin/
