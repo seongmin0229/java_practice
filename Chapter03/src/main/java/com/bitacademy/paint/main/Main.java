@@ -4,6 +4,7 @@ import com.bitacademy.paint.i.Drawable;
 import com.bitacademy.paint.point.*;
 import com.bitacademy.paint.shape.*;
 import com.bitacademy.paint.text.GraphicText;
+//import com.bitacademy.paint.*;
 
 public class Main {
 	public static void main(String[] args) {
