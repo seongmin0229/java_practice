@@ -10,3 +10,9 @@
 README.md
 **/.project
 **/bin/
+
+#intellij
+**/.idea
+
+#vscode
+**/.vscode
