@@ -1,26 +1,40 @@
 package prob5;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class MyStack {
 	private int top;
-	private List<String> dataArray;
+	private String[] stack;
+	private int originStackLen;
 	
 	public MyStack(int size) {
 		top = -1;
-		dataArray = new ArrayList<>(3);
+		stack = new String[size];
+		originStackLen = size;
 	}
 	
 	public void push(String str) {
 		top++;
-		dataArray.add(str);
+		if(top > stack.length - 1) {
+			String tempArray[] = new String[top + 1];
+			for(int i = 0; i < stack.length; i++) {
+				tempArray[i] = stack[i];
+			}
+			stack = tempArray;
+			System.out.println("이전 완료!" + stack.toString());
+		}
+		stack[top] = str;
 	}
 	
 	public String pop() throws MyStackException{
 		if(top == -1)
 			throw new MyStackException();
-		String str =  dataArray.get(top);
+		String str =  stack[top];
+		if(stack.length > originStackLen) {
+			String[] tempArray = new String[top];
+			for(int i = 0; i < tempArray.length; i++) {
+				tempArray[i] = stack[i];
+			}
+			stack = tempArray;
+		}
 		top--;
 		return str;
 	}
